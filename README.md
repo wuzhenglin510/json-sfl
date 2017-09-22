@@ -11,21 +11,19 @@ Use structure query language to filter json object. But it`s not a query system 
     const B = require('../../builder/index'); // Builder
     const A = require('../../analysis/index'); // Analysis
 
-    //---------------------Builder start
-
-     [//single](//single) equal
+    //single equal
     let queryModel = B.E.Equal('contact.phone', '110110110110');
 
-     [//multi](//multi) equal with and
+    //multi equal with and
     let queryModel2 = B.R.And([
-     B.E.Equal('name', 'leo'),
-     B.E.Equal('age', 23)
+        B.E.Equal('name', 'leo'),
+        B.E.Equal('age', 23)
      ]);
 
     if (A.instance().test(queryModel, instance)) {
-    		console.log('yes, it is')
+    	console.log('yes, it is')
     } else {
-    		console.log('no, it isn`t')
+    	console.log('no, it isn`t')
     }
 
 
