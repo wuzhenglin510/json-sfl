@@ -72,6 +72,7 @@ describe('#Test_Equation', function () {
         it('should be true when matched', function () {
             let instance = data.person.leo;
             let queryModel = B.E.InLike('name', ['\\w+']);
+            console.log(JSON.stringify(queryModel, null, 4)); process.exit(0)
             assert(A.instance().test(queryModel, instance), 'should be true');
         });
 
