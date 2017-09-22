@@ -1,5 +1,5 @@
 {
-  "name": "json-sql",
+  "name": "json-sfl",
   "version": "1.0.0",
   "description": "use structure query language to filter json object",
   "main": "index.js",
@@ -13,6 +13,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:wuzhenglin510/json-sql.git"
+    "url": "git@github.com:wuzhenglin510/json-sfl.git"
   }
 }

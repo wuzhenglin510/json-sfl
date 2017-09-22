@@ -1,10 +1,10 @@
-# json-sql
+# json-sfl
 
 Use structure query language to filter json object. But it`s not a query system like mysql, just a filter condition. You feed it with a filter model and a json isntance object, it will spit out true or false, depend on the json object is matched by the filter model or not.
 
 ## Installation
 
-    npm install json-sql --save
+    npm install json-sfl --save
 
 ## Quick Usage
 
