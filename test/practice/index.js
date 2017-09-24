@@ -15,9 +15,8 @@ describe('#ComplexTest', function () {
                 B.E.Equal('age', 23)
             ])
         ]);
-        let analysis = A.instance();
         for (let person of Object.values(data.person)) {
-            if (analysis.test(queryModel, person)) hits.push(person);
+            if (A.test(queryModel, person)) hits.push(person);
         }
         assert(hits.length == 3, `should has 3 item, but get ${hits.length}`);
     });
@@ -27,9 +26,8 @@ describe('#ComplexTest', function () {
         let queryModel = B.E.InLike('contact.address', [
             '深圳市'
         ]);
-        let analysis = A.instance();
         for (let person of Object.values(data.person)) {
-            if (analysis.test(queryModel, person)) hits.push(person);
+            if (A.test(queryModel, person)) hits.push(person);
         }
         assert(hits.length == 3, `should has 3 item, but get ${hits.length}`);
     });
@@ -40,9 +38,8 @@ describe('#ComplexTest', function () {
             '深圳市',
             '北京市'
         ]);
-        let analysis = A.instance();
         for (let person of Object.values(data.person)) {
-            if (analysis.test(queryModel, person)) hits.push(person);
+            if (A.test(queryModel, person)) hits.push(person);
         }
         assert(hits.length == 4, `should has 4 item, but get ${hits.length}`);
     });
@@ -53,9 +50,8 @@ describe('#ComplexTest', function () {
             'leo',
             'bee'
         ]);
-        let analysis = A.instance();
         for (let person of Object.values(data.person)) {
-            if (analysis.test(queryModel, person)) hits.push(person);
+            if (A.test(queryModel, person)) hits.push(person);
         }
         assert(hits.length == 2, `should has 2 item, but get ${hits.length}`);
     })

@@ -2,18 +2,9 @@ const Equations = [...Object.keys(require('../builder/model/structure/Equation')
 const Relations = [...Object.keys(require('../builder/model/structure/Relation'))];
 
 class Analysis {
-    constructor(){
-
-    }
-
-    static instance() {
-        return new Analysis();
-    }
-
-    test(model, instance) {
+    static test(model, instance) {
         return match(model, instance);
     }
-
 }
 
 function isEquation(type) {
