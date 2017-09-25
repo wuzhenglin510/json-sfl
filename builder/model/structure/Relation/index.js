@@ -4,12 +4,26 @@ class And_Model {
         this.type = 'And';
         this.entries = entries;
     }
+
+    append(entry) {
+        if (typeof this.entries === undefined) {
+            this.entries = [];
+        }
+        this.entries.push(entry);
+    }
 }
 
 class Or_Model {
     constructor(entries) {
         this.type = 'Or';
         this.entries = entries;
+    }
+
+    append(entry) {
+        if (typeof this.entries === undefined) {
+            this.entries = [];
+        }
+        this.entries.push(entry);
     }
 }
 
