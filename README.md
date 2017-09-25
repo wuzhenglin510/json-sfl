@@ -36,6 +36,9 @@ Use structure query language to filter json object. But it`s not a query system 
       - Equal: single specifics value equal expression
       - In: multi specifics values include expression
       - InLike: multi regex values include expression
+      - Between
+      - Smaller
+      - Bigger
     - Relation
       - And: node in the and relation should all true
       - Or: node in the or relation should one true at least, as a result reuturn true

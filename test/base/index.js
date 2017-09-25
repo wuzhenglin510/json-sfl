@@ -81,6 +81,50 @@ describe('#Test_Equation', function () {
             assert(!A.test(queryModel, instance), 'should be false');
         });
     })
+
+    describe('#Test_Smaller', function () {
+        it('[flat] should be true when matched', function () {
+            let instance = data.person.leo;
+            let queryModel = B.E.Smaller('age', '25');
+            assert(A.test(queryModel, instance), 'should be true');
+        });
+
+        it('[flat] should be false when not matched', function () {
+            let instance = data.person.leo;
+            let queryModel = B.E.Smaller('age', '23');
+            assert(!A.test(queryModel, instance), 'should be false');
+        });
+
+        it('[flat] should be false when not matched', function () {
+            let instance = data.person.leo;
+            let queryModel = B.E.Smaller('age', '22');
+            assert(!A.test(queryModel, instance), 'should be false');
+        });
+
+    });
+
+    describe('#Test_Bigger', function () {
+        it('[flat] should be true when matched', function () {
+            let instance = data.person.leo;
+            let queryModel = B.E.Bigger('age', '22');
+            assert(A.test(queryModel, instance), 'should be true');
+        });
+
+        it('[flat] should be false when not matched', function () {
+            let instance = data.person.leo;
+            let queryModel = B.E.Bigger('age', '23');
+            assert(!A.test(queryModel, instance), 'should be false');
+        });
+
+        it('[flat] should be false when not matched', function () {
+            let instance = data.person.leo;
+            let queryModel = B.E.Bigger('age', '24');
+            assert(!A.test(queryModel, instance), 'should be false');
+        });
+
+    });
+
+
 });
 
 

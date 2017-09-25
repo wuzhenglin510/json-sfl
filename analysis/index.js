@@ -45,6 +45,9 @@ function matchEquation(equationNodeModel, instance) {
         case 'Equal': return matchEqual(equationNodeModel.value, value);
         case 'In': return matchIn(equationNodeModel.value, value);
         case 'InLike': return matchInLike(equationNodeModel.value, value);
+        case 'Between': return matchBetween(equationNodeModel.min, equationNodeModel.max, value);
+        case 'Smaller': return matchSmaller(equationNodeModel.value, value);
+        case 'Bigger': return matchBigger(equationNodeModel.value, value);
         default: throw new Error('undefined equation type');
     }
 }
@@ -78,6 +81,19 @@ function matchInLike(expects, realValue) {
     }
     return false;
 }
+
+function matchBetween(expectMin, expectMax, realValue) {
+    return (realValue >= expectMin && realValue <= expectMax);
+}
+
+function matchSmaller(expect, realValue) {
+    return realValue < expect;
+}
+
+function matchBigger(expect, realValue) {
+    return realValue > expect
+}
+
 
 
 module.exports = Analysis;
