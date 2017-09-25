@@ -1,6 +1,6 @@
 {
   "name": "json-sfl",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "use structure query language to filter json object",
   "main": "index.js",
   "scripts": {

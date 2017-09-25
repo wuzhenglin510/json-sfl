@@ -20,7 +20,7 @@ Use structure query language to filter json object. But it`s not a query system 
         B.E.Equal('age', 23)
      ]);
 
-    if (A.instance().test(queryModel, instance)) {
+    if (A.test(queryModel, instance)) {
     	console.log('yes, it is')
     } else {
     	console.log('no, it isn`t')
