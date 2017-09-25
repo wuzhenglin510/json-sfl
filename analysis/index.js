@@ -38,7 +38,7 @@ function matchRelation(equationNodeModel, instance) {
 function matchEquation(equationNodeModel, instance) {
     let value = instance;
     for (let subParam of equationNodeModel.param.split('.')) {
-        if (typeof value === undefined) return false;
+        if (typeof(value) == 'undefined') return false;
         value = value[subParam];
     }
     switch (equationNodeModel.type) {
