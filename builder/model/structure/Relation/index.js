@@ -6,7 +6,7 @@ class And_Model {
     }
 
     append(entry) {
-        if (typeof this.entries === undefined) {
+        if (typeof(this.entries) == 'undefined') {
             this.entries = [];
         }
         this.entries.push(entry);
@@ -20,7 +20,7 @@ class Or_Model {
     }
 
     append(entry) {
-        if (typeof this.entries === undefined) {
+        if (typeof(this.entries) == 'undefined') {
             this.entries = [];
         }
         this.entries.push(entry);

@@ -169,6 +169,16 @@ describe('#Test_Relation', function () {
             ]);
             assert(!A.test(queryModel, instance), 'should be false');
         });
+
+
+        it('[flat] append and should be true when matched', function () {
+            let instance = data.person.leo;
+            let queryModel = B.R.And();
+            queryModel.append(B.E.Equal('name', 'leo'));
+            queryModel.append(B.E.Equal('age', 23));
+            assert(A.test(queryModel, instance), 'should be true');
+        });
+
     });
 
     describe('#Test_Or', function () {
